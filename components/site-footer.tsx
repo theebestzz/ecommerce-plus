@@ -1,8 +1,13 @@
+"use client"
+
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 import { siteConfig } from "@/config/site"
 
 export function SiteFooter() {
+  const pathanme = usePathname()
+  if (pathanme.startsWith("/dashboard")) return null
   return (
     <footer className="border-t">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-20 lg:px-8">

@@ -17,7 +17,7 @@ export function SiteHeader() {
   const { cartCount } = useShoppingCart()
   const defaultSearchQuery = searchParams.get("search") ?? ""
 
-  if (pathanme.startsWith("/studio")) return null
+  if (pathanme.startsWith("/dashboard")) return null
 
   function onSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -54,7 +54,7 @@ export function SiteHeader() {
           </Link>
           <ThemeToggle />
           {process.env.NODE_ENV === "development" && (
-            <Link href={"/studio"}>
+            <Link href={"/dashboard"}>
               <Button size="sm" variant="ghost">
                 <Edit className="h5- w-5" />
               </Button>
