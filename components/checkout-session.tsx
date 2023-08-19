@@ -16,6 +16,7 @@ export function CheckoutSession({ customerDetails }: Props) {
     if (customerDetails) {
       clearCart()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [customerDetails])
 
   if (!customerDetails) {
