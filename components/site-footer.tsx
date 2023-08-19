@@ -18,12 +18,9 @@ export function SiteFooter() {
             </div>
           ))}
         </nav>
-        <Link
-          href="https://www.fullstack.so"
-          className="mt-10 block text-center text-xs leading-5"
-        >
-          &copy; {new Date().getFullYear()} {siteConfig.name} LLC. All rights
-          reserved.
+        <Link href="/" className="mt-10 block text-center text-xs leading-5">
+          &copy; {new Date().getFullYear()} {siteConfig.name} &mdash; LLC. All
+          rights reserved.
         </Link>
       </div>
     </footer>
